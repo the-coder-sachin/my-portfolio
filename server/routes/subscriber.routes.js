@@ -48,4 +48,25 @@ subscriberRouter.post("/add", async (req, res) => {
   }
 });
 
+subscriberRouter.get("/", async (req, res)=>{
+    try {
+        const subscribers = await subscriber.find().sort({createdAt: 1});
+
+        if(!subscribers || subscribers.length === 0){
+            return res.status(404).json({
+                success: false,
+                message:"Not found any subscribers"
+            })
+        }
+        res.status(200).json({
+            success:true,
+            message:"Sent the list of all subscribers",
+            data: subscribers
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({message:"Error getting subscribers"})
+    }
+})
+
 export default subscriberRouter;
