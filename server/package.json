@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "A personal developer portfolio built with the MERN stack, showcasing my projects, skills, and experience. Fully responsive and optimized for performance.",
+  "keywords": [
+    "portfolio"
+  ],
+  "homepage": "https://github.com/the-coder-sachin/my-portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/the-coder-sachin/my-portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-coder-sachin/my-portfolio.git"
+  },
+  "license": "ISC",
+  "author": "sachin kumar",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1"
+  }
+}
