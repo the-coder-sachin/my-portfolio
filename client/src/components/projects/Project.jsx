@@ -41,7 +41,6 @@ const Project = () => {
           }
           link={"https://github.com/the-coder-sachin/live-chat-app-jan-2025"}
         />
-        \
       </div>
     </section>
   );

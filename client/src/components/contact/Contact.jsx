@@ -19,10 +19,10 @@ const Contact = () => {
     const handleSubmit = async(e)=>{
         e.preventDefault();
         if(!name){
-          toast.warning("Please enter your phone")
+          toast.warning("Please enter your name")
           return
         }
-        if(!phone){
+        if(!phone || phone.length<10){
           toast.warning("Please enter your phone")
           return
         }
@@ -43,6 +43,10 @@ const Contact = () => {
           if(response.data.success){
             toast.success("Thank you, your message sent successfully")
           }
+          setName("")
+          setEmail("")
+          setPhone("")
+          setMessage("")
         } catch (error) {
           console.log(error);
           toast.error("Something broke! please try again later")
@@ -73,7 +77,7 @@ const Contact = () => {
             </div>
             <div>
             <label>Phone</label>
-            <input type="text" value={phone} onChange={e=>setPhone(e.target.value)} className="border w-full mt-2 border-white/50 rounded-md block p-2" placeholder="Enter your phone" />
+            <input type="tel" pattern="[0-9]*" inputMode="numeric" value={phone} onChange={e=>setPhone(e.target.value)} className="border w-full mt-2 border-white/50 rounded-md block p-2" placeholder="Enter your phone" />
             </div>
             <div>
             <label>Email</label>
