@@ -6,6 +6,7 @@ import {Element} from "react-scroll";
 import Service from "./components/services/Service";
 import Project from "./components/projects/Project";
 import Contact from "./components/contact/Contact";
+import {ToastContainer} from "react-toastify"
 
 const App = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
       <Element name="contact">
       <Contact />
       </Element>
+      <ToastContainer className={"text-xs"} theme="dark" hideProgressBar={true} position="top-left" autoClose={2000} />
     </main>
   );
 };

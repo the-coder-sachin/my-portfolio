@@ -1,16 +1,52 @@
 import  Button  from "../Button";
 import assets from "../../assets";
 import { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const [message, setMessage] = useState("")
+    const [message, setMessage] = useState("");
+
+    function isValidEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+
 
     const handleSubmit = async(e)=>{
-        e.preventDefault()
-        console.log({name:name,email:email,phone:phone,message:message});        
+        e.preventDefault();
+        if(!name){
+          toast.warning("Please enter your phone")
+          return
+        }
+        if(!phone){
+          toast.warning("Please enter your phone")
+          return
+        }
+        if(!email){
+          toast.warning("Please enter your email")
+          return
+        }
+        if(!isValidEmail(email)){
+          toast.warning("Please enter a valid email")
+          return
+        }
+        if(!message){
+          toast.warning("Please enter your message")
+          return
+        }
+        try {
+          const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/subscriber/add`, {name,email,phone,message});
+          if(response.data.success){
+            toast.success("Thank you, your message sent successfully")
+          }
+        } catch (error) {
+          console.log(error);
+          toast.error("Something broke! please try again later")
+        }
     }
   return (
     <section className="text-white mt-20">
@@ -41,7 +77,7 @@ const Contact = () => {
             </div>
             <div>
             <label>Email</label>
-            <input type="text" value={email} onChange={e=>setEmail(e.target.value)} className="border w-full mt-2 border-white/50 rounded-md block p-2" placeholder="Enter your email" />
+            <input type="email" value={email} onChange={e=>setEmail(e.target.value)} className="border w-full mt-2 border-white/50 rounded-md block p-2" placeholder="Enter your email" />
             </div>
             <div>
             <label>Message</label>

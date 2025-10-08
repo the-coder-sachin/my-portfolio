@@ -4,7 +4,7 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import subscriberRouter from "./routes/subscriber.routes.js";
 
-dotenv.config({ path: "../.env" });
+dotenv.config();
 
 const app = express();
 

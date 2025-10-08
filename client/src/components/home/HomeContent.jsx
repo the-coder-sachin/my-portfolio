@@ -43,10 +43,21 @@ const HomeContent = () => {
         <ButtonTransparent>download CV</ButtonTransparent>
       </div>
       <div className="social-media-handles flex gap-5 md:pl-3">
-        <button className="text-lg cursor-pointer active:scale-90 transition-all duration-300 text-fuchsia-700 bg-white hover:bg-fuchsia-700 hover:text-white rounded-full p-2">
+        <button
+          onClick={() => window.open("https://github.com/the-coder-sachin/", "_blank")}
+          className="text-lg cursor-pointer active:scale-90 transition-all duration-300 text-fuchsia-700 bg-white hover:bg-fuchsia-700 hover:text-white rounded-full p-2"
+        >
           <FaGithub />
         </button>
-        <button className="text-lg cursor-pointer active:scale-90 transition-all duration-300 text-fuchsia-700 bg-white hover:bg-fuchsia-700 hover:text-white rounded-full p-2">
+        <button
+          onClick={() =>
+            window.open(
+              "https://www.linkedin.com/in/sachin-kumar-431b62312/",
+              "_blank"
+            )
+          }
+          className="text-lg cursor-pointer active:scale-90 transition-all duration-300 text-fuchsia-700 bg-white hover:bg-fuchsia-700 hover:text-white rounded-full p-2"
+        >
           <FaLinkedinIn />
         </button>
         <button className="text-lg cursor-pointer active:scale-90 transition-all duration-300 text-fuchsia-700 bg-white hover:bg-fuchsia-700 hover:text-white rounded-full p-2">
