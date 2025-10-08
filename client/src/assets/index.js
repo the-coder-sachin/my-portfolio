@@ -12,6 +12,7 @@ import fullStack from "./full-stack.png";
 import lumenWear from "./lumen-wear.png";
 import freeChatApp from "./free-chat-app.png";
 import pictureIt from "./picture-it.png";
+import group from "./group.png"
 
 export default {
     hero,
@@ -27,5 +28,6 @@ export default {
     deployment,
     lumenWear,
     freeChatApp,
-    pictureIt
+    pictureIt,
+    group
 }

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import {Element} from "react-scroll";
 import Service from "./components/services/Service";
 import Project from "./components/about/projects/Project";
+import Contact from "./components/contact/Contact";
 
 const App = () => {
   return (
@@ -41,6 +42,9 @@ const App = () => {
       </Element>
       <Element name="projects">
       <Project />
+      </Element>
+      <Element name="contact">
+      <Contact />
       </Element>
     </main>
   );

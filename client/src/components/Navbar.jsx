@@ -63,16 +63,20 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="fixed text-xs right-0 h-full p-2 invisible md:visible">
+      <Link to="contact" smooth={true} duration={600} offset={-90}>
         <Button stars={true}>
           <span className="">
             <IoMdCall />
           </span>
           <span className="">contact me</span>
         </Button>
+      </Link>
       </div>
-      <button className="bg-white text-4xl absolute top-20 left-4 animate-bounce text-fuchsia-600 rounded-md px-1 md:invisible">
-        <IoIosMail />
-      </button>
+      <Link to="contact" smooth={true} duration={600} offset={-90}>
+        <button className="bg-white text-4xl absolute top-20 left-4 animate-bounce text-fuchsia-600 rounded-md px-1 md:invisible">
+          <IoIosMail />
+        </button>
+      </Link>
     </div>
   );
 }

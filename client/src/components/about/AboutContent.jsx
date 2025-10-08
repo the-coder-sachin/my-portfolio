@@ -12,7 +12,7 @@ const AboutContent = () => {
   return (
     <div className="w-full flex flex-col gap-5 lg:px-12">
       <h2 className="text-3xl font-bold text-white text-center md:text-start">About me</h2>
-      <div className="text-fuchsia-200 text-sm flex flex-col gap-3">
+      <div className="text-fuchsia-200 text-sm flex flex-col gap-3 text-center md:text-start">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
           aliquam facere quas nihil totam corrupti amet impedit et? Voluptates

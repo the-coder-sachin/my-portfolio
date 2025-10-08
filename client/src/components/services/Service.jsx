@@ -5,7 +5,7 @@ import ServicesScroll from "./ServicesScroll";
 
 const Service = () => {
   return (
-    <section className="">
+    <section className="mt-10">
       <h3 className="capitalize text-3xl font-bold text-white text-center">
         services
       </h3>
