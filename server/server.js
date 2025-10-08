@@ -21,7 +21,13 @@ app.get("/", (req, res)=>{
 const port = process.env.PORT || 5000;
 
 
-app.listen(port, ()=>{
-    console.log(`server running at port ${port}`);
-    connectDB()
-})
+connectDB()
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`Server running at port ${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error("DB connection failed:", err);
+  });
+
