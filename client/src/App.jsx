@@ -2,6 +2,9 @@ import assets from "./assets";
 import About from "./components/about/About";
 import Home from "./components/home/Home";
 import Navbar from "./components/Navbar";
+import {Element} from "react-scroll";
+import Service from "./components/services/Service";
+import Project from "./components/about/projects/Project";
 
 const App = () => {
   return (
@@ -27,8 +30,18 @@ const App = () => {
       </nav>
 
       {/* elements */}
+      <Element name="home">
       <Home />
+      </Element>
+      <Element name="about">
       <About />
+      </Element>
+      <Element name="service">
+      <Service />
+      </Element>
+      <Element name="projects">
+      <Project />
+      </Element>
     </main>
   );
 };

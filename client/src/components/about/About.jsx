@@ -3,7 +3,7 @@ import AboutImg from "./AboutImg";
 
 const About = () => {
   return (
-    <section className="relative min-h-screen">
+    <section className="relative -screen mt-8">
       {/* content */}
       <div className="flex flex-col-reverse lg:flex-row gap-7 lg:gap-0 p-12 t-32">
         {/* image */}

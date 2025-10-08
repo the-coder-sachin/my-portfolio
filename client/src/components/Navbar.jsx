@@ -2,6 +2,7 @@ import assets from "../assets";
 import { IoMdCall } from "react-icons/io";
 import Button from "./Button";
 import { IoIosMail } from "react-icons/io";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
@@ -13,22 +14,50 @@ const Navbar = () => {
         <ul className="flex justify-between items-center gap-5 capitalize font-semibold h-full">
           <li className="cursor-pointer border-b-3 border-white/0 hover:border-pink-400 transition-all duration-300 h-full flex items-center">
             <span className="transition-all duration-300 active:scale-90">
-              home
+              <Link
+                to="home"
+                smooth={true}
+                duration={600}
+                offset={-160} // for navbar height
+              >
+                Home
+              </Link>
             </span>
           </li>
           <li className="cursor-pointer border-b-3 border-white/0 hover:border-pink-400 transition-all duration-300 h-full flex items-center">
             <span className="transition-all duration-300 active:scale-90">
-              about me
+              <Link
+                to="about"
+                smooth={true}
+                duration={600}
+                offset={-60} // for navbar height
+              >
+                about me
+              </Link>
             </span>
           </li>
           <li className="cursor-pointer border-b-3 border-white/0 hover:border-pink-400 transition-all duration-300 h-full flex items-center">
             <span className="transition-all duration-300 active:scale-90">
-              services
+              <Link
+                to="service"
+                smooth={true}
+                duration={600}
+                offset={-120} // for navbar height
+              >
+                services
+              </Link>
             </span>
           </li>
           <li className="cursor-pointer border-b-3 border-white/0 hover:border-pink-400 transition-all duration-300 h-full flex items-center">
             <span className="transition-all duration-300 active:scale-90">
-              my projects
+              <Link
+                to="projects"
+                smooth={true}
+                duration={600}
+                offset={-90} // for navbar height
+              >
+                my projects
+              </Link>
             </span>
           </li>
         </ul>
@@ -40,11 +69,10 @@ const Navbar = () => {
           </span>
           <span className="">contact me</span>
         </Button>
-
       </div>
-        <button className="bg-white text-4xl absolute top-20 left-4 animate-bounce text-fuchsia-600 rounded-md px-1 md:invisible">
-        <IoIosMail/>
-        </button>
+      <button className="bg-white text-4xl absolute top-20 left-4 animate-bounce text-fuchsia-600 rounded-md px-1 md:invisible">
+        <IoIosMail />
+      </button>
     </div>
   );
 }
