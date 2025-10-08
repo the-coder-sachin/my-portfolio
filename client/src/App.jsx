@@ -4,7 +4,7 @@ import Home from "./components/home/Home";
 import Navbar from "./components/Navbar";
 import {Element} from "react-scroll";
 import Service from "./components/services/Service";
-import Project from "./components/about/projects/Project";
+import Project from "./components/projects/Project";
 import Contact from "./components/contact/Contact";
 
 const App = () => {
