@@ -11,31 +11,37 @@ import { DiBootstrap } from "react-icons/di";
 const AboutContent = () => {
   return (
     <div className="w-full flex flex-col gap-5 lg:px-12">
-      <h2 className="text-3xl font-bold text-white text-center md:text-start">About me</h2>
-      <div className="text-fuchsia-200 text-sm flex flex-col gap-3 text-center md:text-start">
+      <h2 className="text-3xl font-bold text-white text-center md:text-start">
+        About me
+      </h2>
+      <div className="text-fuchsia-100 tracking-wide text-sm flex flex-col gap-3 text-center md:text-start">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-          aliquam facere quas nihil totam corrupti amet impedit et? Voluptates
-          nihil reiciendis magni quos saepe labore consequatur quas hic sapiente
-          repellat consequuntur quam facere fugit similique mollitia nisi
-          laborum distinctio, provident, eveniet debitis officiis numquam
-          pariatur quae illum. Fuga, esse ex!
+          I’m Sachin Kumar, a passionate Web Developer with a knack for turning
+          ideas into polished, performant web experiences. Over the years, I’ve
+          worked on a variety of projects — from full-scale e-commerce platforms
+          and AI-driven tools to real-time chat apps — always striving to
+          deliver robust, user-centric solutions. My core toolkit revolves
+          around React, Tailwind CSS, and the MERN stack, with experience in
+          state management (Redux, Zustand), API integrations, and clean
+          architecture.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-          praesentium hic cupiditate quis est nostrum, aperiam temporibus,
-          inventore aspernatur qui quo iusto culpa ad porro, repellendus dolorem
-          animi sequi beatae? Dicta velit laudantium iure ea sit blanditiis,
-          saepe provident repellendus?
+          What drives me is more than just coding — it’s the challenge of
+          designing intuitive interfaces, architecting clean code, and
+          continuously improving each project iteration. Whether I’m building a
+          new component, refactoring existing logic, or experimenting with
+          emerging technologies, I embrace every opportunity to optimize
+          performance, maintainability, and user experience. I value
+          readability, modularity, and thoughtful UX decisions, and I’m
+          constantly pushing myself to adopt best practices and modern patterns.
         </p>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic
-          labore quae sed illum ipsum assumenda eum ea commodi deserunt
-          accusamus provident unde laboriosam, mollitia itaque? Omnis unde qui
-          non cupiditate, architecto aut dolore dolorum laudantium debitis ut
-          sit, rem quidem nihil id? Fugit fuga nostrum soluta temporibus,
-          distinctio, esse nesciunt minus, magni deserunt sed quis voluptate
-          fugiat laudantium dolorum.
+          Looking ahead, I aim to solve real-world problems through scalable,
+          creative solutions. I’m always eager to collaborate with
+          forward-thinking teams or individuals who believe in innovation and
+          quality. Whether it’s a side project, startup idea, or full-scale
+          product, I’m ready to dive in, contribute meaningfully, and grow along
+          the way.
         </p>
       </div>
       <div>

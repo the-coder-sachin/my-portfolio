@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 
 const HomeContent = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center md:items-start gap-5 px-8 lg:px-12 lg:pl-22">
+    <div className="w-full flex flex-col justify-center items-center md:items-start gap-5 px-8 lg:px-12 lg:pl-32 mt-20">
       <p className="uppercase text-sm lg:text-base">
         Welcome to my world{" "}
         <span>
@@ -26,11 +26,11 @@ const HomeContent = () => {
       <div className="text-3xl text-center md:text-start">
         <span className="text-fuchsia-400 uppercase font-bold">web</span>{" "}
         <span className="font-bold">Developer</span>
-        <p className="text-xs md:text-sm text-fuchsia-200 w-3/4 mx-auto md:mx-0">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem repudiandae non numquam repellat? Cum maxime
-          repellendus nostrum repellat harum quidem distinctio vitae, ad non
-          esse, error minus praesentium consectetur sit.{" "}
+        <p className="text-xs md:text-sm text-fuchsia-100 tracking-wide mt-1 w-3/4 mx-auto md:mx-0">
+          Passionate Web Developer skilled in React and MERN stack, focused on
+          building clean, responsive, and user-centric applications. Fast
+          learner, creative thinker, and always ready to explore new
+          technologies.
         </p>
       </div>
 
@@ -40,11 +40,15 @@ const HomeContent = () => {
             my projects
           </Link>
         </ButtonWhite>
-        <ButtonTransparent>download CV</ButtonTransparent>
+        <ButtonTransparent>
+          <a href="/resume.pdf" download={"sachin_kumar_resume.pdf"}>download CV</a>
+        </ButtonTransparent>
       </div>
       <div className="social-media-handles flex gap-5 md:pl-3">
         <button
-          onClick={() => window.open("https://github.com/the-coder-sachin/", "_blank")}
+          onClick={() =>
+            window.open("https://github.com/the-coder-sachin/", "_blank")
+          }
           className="text-lg cursor-pointer active:scale-90 transition-all duration-300 text-fuchsia-700 bg-white hover:bg-fuchsia-700 hover:text-white rounded-full p-2"
         >
           <FaGithub />
