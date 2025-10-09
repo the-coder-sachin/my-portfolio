@@ -2,7 +2,7 @@ import  Button  from "../Button";
 import assets from "../../assets";
 import { useState } from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 import Loader from "../Loader";
 
 const Contact = () => {

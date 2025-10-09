@@ -6,14 +6,14 @@ import {Element} from "react-scroll";
 import Service from "./components/services/Service";
 import Project from "./components/projects/Project";
 import Contact from "./components/contact/Contact";
-import {ToastContainer} from "react-toastify"
+import {Toaster} from "sonner"
 
 const App = () => {
   return (
-    <main className="relative bg-black/50 min-h-screen">
+    <main className="relative bg-black/30 min-h-screen">
       {/* background video */}
 
-      <div className="absolute inset-0 -z-10 overflow-hidden bg-black will-change-transform">
+      <div className="absolute inset-0 -z-10 overflow-hidden bg-white will-change-transform">
         <video
           className="w-full h-full object-cover blur-[4px] transform-gpu"
           src={assets.abstract}
@@ -48,12 +48,18 @@ const App = () => {
       <Element name="contact">
         <Contact />
       </Element>
-      <ToastContainer
-        className={"text-xs"}
-        theme="dark"
-        hideProgressBar={true}
+      <Toaster
+        toastOptions={{
+          duration: 1000,
+          style: {
+            background: "linear-gradient(to top left, #86198f, #dc2626)",
+            color: "white",
+            fontSize: "14px",
+            border: "1px solid rgba(255,255,255,0.3)",
+          },
+          className: "custom-toast",
+        }}
         position="top-left"
-        autoClose={2000}
       />
     </main>
   );
