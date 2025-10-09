@@ -3,12 +3,15 @@ import assets from "../../assets";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Loader from "../Loader";
 
 const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
+
+    const [loading, setLoading] = useState(false)
 
     function isValidEmail(email) {
       const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -39,6 +42,7 @@ const Contact = () => {
           return
         }
         try {
+          setLoading(true)
           const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/subscriber/add`, {name,email,phone,message});
           if(response.data.success){
             toast.success("Thank you, your message sent successfully")
@@ -50,10 +54,13 @@ const Contact = () => {
         } catch (error) {
           console.log(error);
           toast.error("Something broke! please try again later")
+        } finally{
+          setLoading(false)
         }
     }
   return (
     <section className="text-white mt-20">
+      {loading && <Loader/>}
       {/* heading */}
       <>
         <h3 className="capitalize text-3xl font-bold text-white text-center">
