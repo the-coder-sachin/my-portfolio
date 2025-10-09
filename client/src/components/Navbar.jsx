@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="relative bg-white/10 border border-white/30 backdrop-blur-sm rounded-full flex items-center h-12 md:h-14 w-[90%] lg:w-3/4 mx-auto">
       <div className="fixed left-0 h-full md:flex justify-center items-center hidden">
-        <img src={assets.logo} alt="logo" className="h-7 mx-6" />
+        <img src="meta.png" alt="logo" className="h-9 mx-6" />
       </div>
       <div className="w-full flex justify-center h-full whitespace-nowrap text-sm lg:text-base">
         <ul className="flex justify-between items-center gap-5 capitalize font-semibold h-full">

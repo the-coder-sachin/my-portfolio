@@ -13,7 +13,7 @@ const App = () => {
     <main className="relative bg-black/30 min-h-screen">
       {/* background video */}
 
-      <div className="absolute inset-0 -z-10 overflow-hidden bg-white will-change-transform">
+      <div className="absolute inset-0 -z-10 overflow-hidden bg-black will-change-transform">
         <video
           className="w-full h-full object-cover blur-[4px] transform-gpu"
           src={assets.abstract}
