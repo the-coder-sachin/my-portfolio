@@ -20,7 +20,6 @@ const App = () => {
           loop
           muted
           autoPlay
-          preload="auto"
         />
       </div>
 
