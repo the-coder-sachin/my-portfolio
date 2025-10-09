@@ -75,7 +75,7 @@ const Contact = () => {
       {/* image and form  */}
       <div className="flex p-8 justify-center flex-col md:flex-row pb-20">
         <div className="img w-full flex justify-center items-center ">
-            <img src={"/group.png"} alt="group" className="w-[320px] h-[350px] object-cover" loading="eager" />
+            <img src={"/group.png"} alt="group" className="w-[320px] h-[350px] object-cover" loading="eager" fetchPriority="high"/>
         </div>
         <form onSubmit={handleSubmit} className="text-sm px-12 flex flex-col gap-3 w-full">
             <div>

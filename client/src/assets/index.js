@@ -9,9 +9,9 @@ import api from "./api.png";
 import uiUx from "./ui-ux.png";
 import deployment from "./deployment.png";
 import fullStack from "./full-stack.png";
-import lumenWear from "./lumen-wear.png";
-import freeChatApp from "./free-chat-app.png";
-import pictureIt from "./picture-it.png";
+import lumenWear from "./lumen-wear.jpg";
+import freeChatApp from "./free-chat-app.jpg";
+import pictureIt from "./picture-it.jpg";
 import group from "./group.png"
 
 export default {
