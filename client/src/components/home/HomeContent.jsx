@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 
 const HomeContent = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center md:items-start gap-5 px-8 lg:px-12 lg:pl-32 mt-20">
+    <div className="w-full flex flex-col justify-center items-center md:items-start gap-5 px-8 lg:px-12 lg:pl-32 md:mt-6 lg:mt-20">
       <p className="uppercase text-sm lg:text-base">
         Welcome to my world{" "}
         <span>
