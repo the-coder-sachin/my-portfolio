@@ -16,11 +16,11 @@ const App = () => {
       <div className="fixed inset-0 -z-10 overflow-hidden bg-black">
         <video
           className="w-full h-full object-cover blur-[4px]"
-          src={"/abstract.mp4"}
           loop
           muted
           autoPlay
-        />
+          playsInline
+        ><source src="/abstract.mp4" type="video/mp4"/></video>
       </div>
 
       {/* navbar */}
