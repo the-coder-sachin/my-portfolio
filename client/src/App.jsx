@@ -10,44 +10,51 @@ import {ToastContainer} from "react-toastify"
 
 const App = () => {
   return (
-    <main className="relative bg-black/50">
+    <main className="relative bg-black/50 min-h-screen">
       {/* background video */}
 
-      <div className="fixed inset-0 -z-10 overflow-hidden bg-black">
+      <div className="absolute inset-0 -z-10 overflow-hidden bg-black will-change-transform">
         <video
-          className="w-full h-full object-cover blur-[4px]"
+          className="w-full h-full object-cover blur-[4px] transform-gpu"
           src={assets.abstract}
           loop
           muted
           autoPlay
+          playsInline
         />
       </div>
 
       {/* navbar */}
 
       <nav className="nav sticky top-5 z-10">
-        <div className="mt-9 text-white">
+        <div className="text-white">
           <Navbar />
         </div>
       </nav>
 
       {/* elements */}
       <Element name="home">
-      <Home />
+        <Home />
       </Element>
       <Element name="about">
-      <About />
+        <About />
       </Element>
       <Element name="service">
-      <Service />
+        <Service />
       </Element>
       <Element name="projects">
-      <Project />
+        <Project />
       </Element>
       <Element name="contact">
-      <Contact />
+        <Contact />
       </Element>
-      <ToastContainer className={"text-xs"} theme="dark" hideProgressBar={true} position="top-left" autoClose={2000} />
+      <ToastContainer
+        className={"text-xs"}
+        theme="dark"
+        hideProgressBar={true}
+        position="top-left"
+        autoClose={2000}
+      />
     </main>
   );
 };
