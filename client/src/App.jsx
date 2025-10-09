@@ -16,7 +16,7 @@ const App = () => {
       <div className="fixed inset-0 -z-10 overflow-hidden bg-black">
         <video
           className="w-full h-full object-cover blur-[4px]"
-          src={assets.abstract}
+          src={"/abstract.mp4"}
           loop
           muted
           autoPlay
