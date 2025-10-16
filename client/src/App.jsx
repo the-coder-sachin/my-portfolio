@@ -20,7 +20,7 @@ const App = () => {
           muted
           autoPlay
           playsInline
-        ><source src="/abstract.mp4" type="video/mp4"/></video>
+        ><source src="" type="video/mp4"/></video>
       </div>
 
       {/* navbar */}
