@@ -12,7 +12,9 @@ import fullStack from "./full-stack.png";
 import lumenWear from "./lumen-wear.jpg";
 import freeChatApp from "./free-chat-app.jpg";
 import pictureIt from "./picture-it.jpg";
-import group from "./group.png"
+import group from "./group.png";
+import smartAIInvoice from "./smartAIInvoice.png"
+
 
 export default {
     hero,
@@ -29,5 +31,6 @@ export default {
     lumenWear,
     freeChatApp,
     pictureIt,
-    group
+    group,
+    smartAIInvoice,
 }

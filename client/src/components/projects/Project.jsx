@@ -1,6 +1,43 @@
 import assets from '../../assets'
 import ProjectCard from './ProjectCard'
 
+
+const projects = [
+  {
+    live: "https://l-men-wear-jww4.vercel.app/",
+    img: assets.lumenWear,
+    title: "lumen wear",
+    description:
+      "Lūmen Wear is a premium e-commerce platform built using the MERN stack (MongoDB, Express, React, Node.js). Designed for a minimalist luxury clothing brand, the app delivers a seamless, high-end shopping experience for modern fashion consumers.",
+    link: "https://github.com/the-coder-sachin/-L-men-Wear",
+  },
+  {
+    live: "https://picture-it-sigma.vercel.app/",
+    img: assets.pictureIt,
+    title: "picture it (AI)",
+    description:
+      "An AI-powered text-to-image generation app built with the MERN stack (MongoDB, Express, React, Node.js). It uses the ClipDrop API to convert user text prompts into realistic images, offering a seamless and interactive creative experience.",
+    link: "https://github.com/the-coder-sachin/picture-it",
+  },
+  {
+    live: "https://live-chat-app-jan-2025.vercel.app/",
+    img: assets.freeChatApp,
+    title: "live chat app (socket.io)",
+    description:
+      "A real-time chatting application built using React, Node.js, Express, and Socket.IO. It features seamless messaging, media sharing via Cloudinary, and delivers an interactive user experience with live communication, built for speed, scalability, and responsiveness.",
+    link: "https://github.com/the-coder-sachin/live-chat-app-jan-2025",
+  },
+  {
+    live: "https://smart-ai-invoice-generator.vercel.app/",
+    img: assets.smartAIInvoice,
+    title: "live chat app (socket.io)",
+    description:
+      "Smart AI Invoice Generator is a fast, simple tool to create professional invoices with signup. Enter business, client, and service details to instantly generate a clean PDF. Perfect for freelancers and small businesses needing quick, hassle-free invoices.",
+    link: "https://github.com/the-coder-sachin/smart-ai-invoice-generator",
+  },
+];
+
+
 const Project = () => {
   return (
     <section className="text-white">
@@ -14,33 +51,16 @@ const Project = () => {
 
       {/* cards */}
       <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 p-8">
-        <ProjectCard
-          live={"https://l-men-wear-jww4.vercel.app/"}
-          img={assets.lumenWear}
-          title={"lumen wear"}
-          description={
-            "Lūmen Wear is a premium e-commerce platform built using the MERN stack (MongoDB, Express, React, Node.js). Designed for a minimalist luxury clothing brand, the app delivers a seamless, high-end shopping experience for modern fashion consumers."
-          }
-          link={"https://github.com/the-coder-sachin/-L-men-Wear"}
-        />
-        <ProjectCard
-          live={"https://picture-it-sigma.vercel.app/"}
-          img={assets.pictureIt}
-          title={"picture it (AI)"}
-          description={
-            "An AI-powered text-to-image generation app built with the MERN stack (MongoDB, Express, React, Node.js). It uses the ClipDrop API to convert user text prompts into realistic images, offering a seamless and interactive creative experience."
-          }
-          link={"https://github.com/the-coder-sachin/picture-it"}
-        />
-        <ProjectCard
-          live={"https://live-chat-app-jan-2025.vercel.app/"}
-          img={assets.freeChatApp}
-          title={"live chat app (socket.io)"}
-          description={
-            "A real-time chatting application built using React, Node.js, Express, and Socket.IO. It features seamless messaging, media sharing via Cloudinary, and delivers an interactive user experience with live communication, built for speed, scalability, and responsiveness."
-          }
-          link={"https://github.com/the-coder-sachin/live-chat-app-jan-2025"}
-        />
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            live={project.live}
+            img={project.img}
+            title={project.title}
+            description={project.description}
+            link={project.link}
+          />
+        ))}
       </div>
     </section>
   );
