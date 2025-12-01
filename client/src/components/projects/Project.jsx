@@ -30,7 +30,7 @@ const projects = [
   {
     live: "https://smart-ai-invoice-generator.vercel.app/",
     img: assets.smartAIInvoice,
-    title: "live chat app (socket.io)",
+    title: "Smart AI Invoice",
     description:
       "Smart AI Invoice Generator is a fast, simple tool to create professional invoices with signup. Enter business, client, and service details to instantly generate a clean PDF. Perfect for freelancers and small businesses needing quick, hassle-free invoices.",
     link: "https://github.com/the-coder-sachin/smart-ai-invoice-generator",
