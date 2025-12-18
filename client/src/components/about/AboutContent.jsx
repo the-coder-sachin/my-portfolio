@@ -46,32 +46,32 @@ const AboutContent = () => {
       </div>
       <div>
         <h3 className="text-white text-xl font-bold">Skills</h3>
-        <div className="flex text-white gap-2 text-lg mt-3 flex-wrap justify-cente">
-          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600">
+        <div className="flex text-white gap-2 text-lg mt-3 flex-wrap">
+          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600 hover:scale-110">
             <FaHtml5 />
           </span>
-          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600">
+          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600 hover:scale-110">
             <FaJs />
           </span>
-          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600">
+          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600 hover:scale-110">
             <FaNodeJs />
           </span>
-          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600">
+          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600 hover:scale-110">
             <FaReact />
           </span>
-          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600">
+          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600 hover:scale-110">
             <RiTailwindCssFill />
           </span>
-          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600">
+          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600 hover:scale-110">
             <SiExpress />
           </span>
-          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600">
+          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600 hover:scale-110">
             <SiMongodb />
           </span>
-          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600">
+          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600 hover:scale-110">
             <DiBootstrap />
           </span>
-          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600">
+          <span className="bg-fuchsia-800 rounded-lg p-3 hover:bg-fuchsia-600 hover:scale-110">
             <IoLogoCss3 />
           </span>
         </div>

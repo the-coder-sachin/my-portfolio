@@ -7,10 +7,14 @@ import Service from "./components/services/Service";
 import Project from "./components/projects/Project";
 import Contact from "./components/contact/Contact";
 import {Toaster} from "sonner"
+import Cursor from "./utils/cursor";
 
 const App = () => {
   return (
+    <>
+    <Cursor/>
     <main className="relative bg-black/30 min-h-screen">
+
       {/* background video */}
 
       <div className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-bl from-rose-950 via-black to-fuchsia-950">
@@ -20,7 +24,7 @@ const App = () => {
           muted
           autoPlay
           playsInline
-        ><source src="" type="video/mp4"/></video>
+          ><source src="" type="video/mp4"/></video>
       </div>
 
       {/* navbar */}
@@ -59,8 +63,9 @@ const App = () => {
           className: "custom-toast",
         }}
         position="top-left"
-      />
+        />
     </main>
+        </>
   );
 };
 

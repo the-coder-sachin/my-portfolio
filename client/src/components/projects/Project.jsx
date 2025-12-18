@@ -1,6 +1,6 @@
-import assets from '../../assets'
-import ProjectCard from './ProjectCard'
-
+import { motion } from "framer-motion";
+import assets from "../../assets";
+import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
@@ -37,33 +37,80 @@ const projects = [
   },
 ];
 
+// Container variants for section
+const sectionVariants = {
+  initial: { opacity: 0, y: 50 },
+  enter: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut", staggerChildren: 0.2 },
+  },
+  exit: { opacity: 0, y: -50, transition: { duration: 0.6, ease: "easeIn" } },
+};
+
+// Variants for each card
+const cardVariants = {
+  initial: { opacity: 0, y: 30, scale: 0.95 },
+  enter: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 const Project = () => {
   return (
-    <section className="text-white">
-      <h2 className="text-center font-bold text-3xl mt-20">My Projects</h2>
-      <p className="text-center text-fuchsia-100 mt-6 px-10 md:px-1">
+    <motion.section
+      className="text-white px-4 md:px-16 min-h-screen"
+      variants={sectionVariants}
+      initial="initial"
+      whileInView="enter"
+      exit="exit"
+      viewport={{ once: false, amount: 0.3 }}
+    >
+      {/* heading */}
+      <motion.h2
+        className="text-center font-bold text-3xl mt-20"
+        variants={cardVariants}
+      >
+        My Projects
+      </motion.h2>
+
+      <motion.p
+        className="text-center text-fuchsia-100 mt-6 px-10 md:px-1"
+        variants={cardVariants}
+      >
         <img src={assets.star} alt="star" className="h-4 inline mx-2" />
-        Discover the projects that showcase my passion for design , development
+        Discover the projects that showcase my passion for design, development
         and innovation
         <img src={assets.star} alt="star" className="h-4 inline mx-2" />
-      </p>
+      </motion.p>
 
       {/* cards */}
-      <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 p-8">
+      <motion.div
+        className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 p-8"
+        variants={cardVariants}
+      >
         {projects.map((project, index) => (
-          <ProjectCard
+          <motion.div
             key={index}
-            live={project.live}
-            img={project.img}
-            title={project.title}
-            description={project.description}
-            link={project.link}
-          />
+            variants={cardVariants}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <ProjectCard
+              live={project.live}
+              img={project.img}
+              title={project.title}
+              description={project.description}
+              link={project.link}
+            />
+          </motion.div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
-}
+};
 
-export default Project
+export default Project;
