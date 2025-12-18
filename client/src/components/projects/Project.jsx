@@ -62,7 +62,7 @@ const cardVariants = {
 const Project = () => {
   return (
     <motion.section
-      className="text-white px-4 md:px-16 min-h-screen"
+      className="text-white -mt-20 px-4 md:px-16 min-h-screen"
       variants={sectionVariants}
       initial="initial"
       whileInView="enter"
@@ -71,7 +71,7 @@ const Project = () => {
     >
       {/* heading */}
       <motion.h2
-        className="text-center font-bold text-3xl mt-20"
+        className="text-center font-bold text-3xl"
         variants={cardVariants}
       >
         My Projects

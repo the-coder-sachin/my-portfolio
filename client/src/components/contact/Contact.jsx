@@ -69,7 +69,7 @@ const Contact = () => {
 
   return (
     <motion.section
-      className="text-white mt-20 px-4 md:px-16 min-h-screen"
+      className="text-white -mt-10 px-4 md:px-16 min-h-screen"
       variants={sectionVariants}
       initial="initial"
       whileInView="enter"
