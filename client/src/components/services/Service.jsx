@@ -30,7 +30,7 @@ const Service = () => {
       initial="initial"
       whileInView="enter"
       exit="exit"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       {/* heading */}
       <motion.h3
@@ -41,7 +41,7 @@ const Service = () => {
       </motion.h3>
 
       <motion.p
-        className="capitalize text-sm text-fuchsia-100 text-center mt-5"
+        className="capitalize text-sm text-fuchsia-100 text-center mt-5 corinthia-regular"
         variants={cardVariants}
       >
         <img src={assets.star} alt="star" className="h-4 inline mx-2" />

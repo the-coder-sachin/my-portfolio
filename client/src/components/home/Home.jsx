@@ -16,7 +16,7 @@ const Home = () => {
       initial="initial"
       whileInView="enter"
       exit="exit"
-      viewport={{ once: false, amount: 0.3 }} // repeated scroll animation
+      viewport={{ once: true, amount: 0.3 }} // repeated scroll animation
     >
       {/* wrapper */}
       <motion.div

@@ -16,7 +16,7 @@ const About = () => {
       initial="initial"
       whileInView="enter"
       exit="exit"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       {/* image */}
       <motion.div

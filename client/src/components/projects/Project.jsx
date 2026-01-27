@@ -67,7 +67,7 @@ const Project = () => {
       initial="initial"
       whileInView="enter"
       exit="exit"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       {/* heading */}
       <motion.h2
@@ -78,7 +78,7 @@ const Project = () => {
       </motion.h2>
 
       <motion.p
-        className="text-center text-fuchsia-100 mt-6 px-10 md:px-1"
+        className="text-center text-fuchsia-100 mt-6 px-10 md:px-1 corinthia-regular"
         variants={cardVariants}
       >
         <img src={assets.star} alt="star" className="h-4 inline mx-2" />
@@ -92,22 +92,25 @@ const Project = () => {
         className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 p-8"
         variants={cardVariants}
       >
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <ProjectCard
-              live={project.live}
-              img={project.img}
-              title={project.title}
-              description={project.description}
-              link={project.link}
-            />
-          </motion.div>
-        ))}
+        {projects
+          .slice()
+          .reverse()
+          .map((project, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <ProjectCard
+                live={project.live}
+                img={project.img}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+              />
+            </motion.div>
+          ))}
       </motion.div>
     </motion.section>
   );

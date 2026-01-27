@@ -9,7 +9,7 @@ import { Link } from "react-scroll";
 const HomeContent = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center md:items-start gap-5 px-8 lg:px-12 lg:pl-32 md:mt-6 lg:mt-20">
-      <p className="uppercase text-sm lg:text-base">
+      <p className="uppercase text-sm lg:text-base italic">
         Welcome to my world{" "}
         <span>
           <img
@@ -20,13 +20,16 @@ const HomeContent = () => {
         </span>
       </p>
       <p>
-        <span className="text-3xl font-bold">Hi, I'm</span> sachin kumar
+        <span className="text-3xl font-bold">Hi, I'm</span>{" "}
+        <span className="italic capitalize tracking-wider ml-2 corinthia-regular">
+          sachin kumar
+        </span>
       </p>
 
       <div className="text-3xl text-center md:text-start">
         <span className="text-fuchsia-400 uppercase font-bold">web</span>{" "}
         <span className="font-bold">Developer</span>
-        <p className="text-xs md:text-sm text-fuchsia-100 tracking-wide mt-1 w-3/4 mx-auto md:mx-0">
+        <p className="italic text-xs md:text-sm tracking-wide mt-1 w-3/4 mx-auto md:mx-0">
           Passionate Web Developer skilled in React and MERN stack, focused on
           building clean, responsive, and user-centric applications. Fast
           learner, creative thinker, and always ready to explore new
@@ -41,7 +44,9 @@ const HomeContent = () => {
           </Link>
         </ButtonWhite>
         <ButtonTransparent>
-          <a href="/resume.pdf" download={"sachin_kumar_resume.pdf"}>download CV</a>
+          <a href="/resume.pdf" download={"sachin_kumar_resume.pdf"}>
+            download CV
+          </a>
         </ButtonTransparent>
       </div>
       <div className="social-media-handles flex gap-5 md:pl-3">
@@ -57,7 +62,7 @@ const HomeContent = () => {
           onClick={() =>
             window.open(
               "https://www.linkedin.com/in/sachin-kumar-431b62312/",
-              "_blank"
+              "_blank",
             )
           }
           className="text-lg cursor-pointer active:scale-90 transition-all duration-300 text-fuchsia-700 bg-white hover:bg-fuchsia-700 hover:text-white rounded-full p-2"

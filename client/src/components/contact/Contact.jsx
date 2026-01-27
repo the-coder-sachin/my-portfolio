@@ -74,7 +74,7 @@ const Contact = () => {
       initial="initial"
       whileInView="enter"
       exit="exit"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       {loading && <Loader />}
 
@@ -86,7 +86,7 @@ const Contact = () => {
         Contact me
       </motion.h3>
       <motion.p
-        className="capitalize text-sm text-fuchsia-100 text-center mt-5"
+        className="capitalize text-sm text-fuchsia-100 text-center mt-5 corinthia-regular"
         variants={itemVariants}
       >
         <img src={assets.star} alt="star" className="h-4 inline mx-2" />
@@ -131,8 +131,8 @@ const Contact = () => {
                   label === "Phone"
                     ? "tel"
                     : label === "Email"
-                    ? "email"
-                    : "text"
+                      ? "email"
+                      : "text"
                 }
                 pattern={label === "Phone" ? "[0-9]*" : undefined}
                 inputMode={label === "Phone" ? "numeric" : undefined}
@@ -143,8 +143,8 @@ const Contact = () => {
                   label === "Name"
                     ? (e) => setName(e.target.value)
                     : label === "Phone"
-                    ? (e) => setPhone(e.target.value)
-                    : (e) => setEmail(e.target.value)
+                      ? (e) => setPhone(e.target.value)
+                      : (e) => setEmail(e.target.value)
                 }
                 placeholder={`Enter your ${label.toLowerCase()}`}
                 className="border w-full mt-2 border-white/50 rounded-md block p-2"
