@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
     <Cursor/>
-    <main className="relative bg-black/30 min-h-screen">
+    <main className="relative bg-black/30 min-h-screen app-sleek-scroll">
 
       {/* background video */}
 

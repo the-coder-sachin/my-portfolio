@@ -61,7 +61,7 @@ const Contact = () => {
       setMessage("");
     } catch (error) {
       console.log(error);
-      toast.error("Something broke! please try again later");
+      toast.error("Something broke! please try again later"+ error);
     } finally {
       setLoading(false);
     }
